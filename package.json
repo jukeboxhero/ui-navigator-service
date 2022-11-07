@@ -1,6 +1,6 @@
 {
   "name": "ui-navigator-service",
-  "version": "0.3.11",
+  "version": "0.3.12",
   "description": "A simple service to inject meta-info about the current route into your controllers and components.",
   "directories": {
     "doc": "doc",
@@ -42,8 +42,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-getowner-polyfill": "1.0.1",
-    "ember-cli-babel": "^5.1.5"
+    "ember-getowner-polyfill": "3.0.2",
+    "ember-cli-babel": "^6.6.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config",
