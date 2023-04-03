@@ -2,13 +2,15 @@ import Ember from 'ember';
 import getOwner from 'ember-getowner-polyfill';
 const { computed, get } = Ember;
 
+import { alias } from '@ember/object/computed';
+
 const navigatorService = Ember.Service.extend({
   init(...args) {
     this._super(args);
     this.set('applicationController', getOwner(this).lookup('controller:application'));
   },
-  currentPath: computed.alias('applicationController.currentPath'),
-  currentRouteName: computed.alias('applicationController.currentRouteName'),
+  currentPath: alias('applicationController.currentPath'),
+  currentRouteName: alias('applicationController.currentRouteName'),
   currentNode: computed('currentPath', function() {
     let chain = this.get('currentPath').split('.');
     let leaf = chain.pop();
